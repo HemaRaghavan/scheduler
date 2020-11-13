@@ -1,3 +1,4 @@
+// Returns appointments for the day
 export function getAppointmentsForDay(state, day) {
   // finding the object in state.days who's name matches the provided day
   const selectedDay = state.days.filter(currentDay => { 
@@ -17,6 +18,7 @@ export function getAppointmentsForDay(state, day) {
   return result;
 }
 
+// Returns interviews correspoind to interview id
 export function getInterview(state, interview) {
   if (!interview) {
     return null;
@@ -29,6 +31,7 @@ export function getInterview(state, interview) {
   return result;
 }
 
+// Returns an array of interviewers for the day
 export function getInterviewersForDay(state, day) {
   // finding the object in state.days who's name matches the provided day
   const selectedDay = state.days.filter(currentDay => { 

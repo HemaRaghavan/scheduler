@@ -8,7 +8,8 @@ export default function useApplicationData() {
     appointments: {},
     interviewers: {}
   });
-
+  
+  // Set the states 
   const setDay = day => setState({ ...state, day });
 
   useEffect(() => {
@@ -20,7 +21,8 @@ export default function useApplicationData() {
       setState(prev => ({ ...prev, days: all[0].data, appointments: all[1].data, interviewers: all[2].data}));
     })
   }, [])
-
+  
+  // Books interview, Make put request to update state locally and on server
   function bookInterview(id, interview) {
     const appointment = {
       ...state.appointments[id],
@@ -61,7 +63,8 @@ export default function useApplicationData() {
       });      
     })
   }
-
+  
+  // Cancels interview, Make request to update state locally and on server
   function cancelInterview(id) {
     const appointment = {
       ...state.appointments[id],
