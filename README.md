@@ -1,5 +1,5 @@
 # Interview Scheduler
-
+A modern client application using the React view library that allows users to book and cancel interviews.
 ## Setup
 
 Install dependencies with `npm install`.
